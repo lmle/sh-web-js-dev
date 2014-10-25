@@ -1,17 +1,18 @@
 'use strict';
 
-var express = require('express');
 var http = require('http');
-var path = require('path');
+var express = require('express');
 
 var app = express();
-var root = path.normalize(__dirname);
-
 var port = process.env.PORT || 3000;
-app.listen(port);
 
+// Serve static files
+app.use(express.static(__dirname));
+
+// Serve index.html
 app.get('/*', function(req, res) {
-  res.sendFile(root + '/index.html');
+  res.sendFile(__dirname + '/index.html');
 });
 
+app.listen(port);
 console.log('Listening on port', port);
