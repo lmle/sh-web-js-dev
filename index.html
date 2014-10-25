@@ -6,6 +6,41 @@
   <script type="text/javascript" src="app.js"></script>
 </head>
 <body ng-app="app">
-  You've reached index.html.
+  <div ng-controller="MainController">
+
+    <h1>Add Contact</h1>
+    <form name="add-contact">
+      <input type="text"></input>
+      <input type="text"></input>
+      <button type="submit">Add Contact</button>
+    </form>
+
+    <hr>
+
+    <h1>Contacts</h1>
+    <table>
+      <tr>
+        <td>
+          Jesse Pinkman
+          </br>+14083893893
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Walter White
+          </br>+14083893893
+        </td>
+      </tr>
+    </table>
+
+    <hr>
+
+    <h1>Send Message</h1>
+    <form name="send-message">
+      <input type="text"></input>
+      <button type="submit">Send Message</button>
+    </form>
+
+  </div>
 </body>
 </html>
