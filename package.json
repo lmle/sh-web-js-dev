@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/lmle/sh-web-js-dev/issues"
   },
-  "homepage": "https://github.com/lmle/sh-web-js-dev"
+  "homepage": "https://github.com/lmle/sh-web-js-dev",
+  "dependencies": {
+    "express": "^4.10.0"
+  }
 }
