@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/lmle/sh-web-js-dev",
   "dependencies": {
-    "express": "^4.10.0"
+    "express": "^4.10.0",
+    "sendhub": "^0.1.6"
   }
 }
