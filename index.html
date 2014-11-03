@@ -3,19 +3,29 @@
 <head>
   <title></title>
   <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script type="text/javascript" src="app.js"></script>
 </head>
 <body ng-app="app">
+<!-- <body> -->
   <div ng-controller="MainController">
 
     <button ng-click="getContacts()">Get Contacts</button>
+    
+    <hr>
+
+    <form action="https://api.sendhub.com/v1/contacts/?username=4088898744&api_key=5be780e4dd524d1815d388eceaaf752f2f94380d" method="post">
+      Name: <input type="text" name="name"><br>
+      Phone Number: <input type="text" name="phoneNumber"><br>
+      <input type="submit" value="Submit">
+    </form>
 
     <hr>
 
     <h1>Add Contact</h1>
     <form name="add-contact" ng-submit="addContact()">
-      <input type="text"></input>
-      <input type="text"></input>
+      <input type="text" ng-model="name"></input>
+      <input type="text" ng-model="phoneNumber"></input>
       <button type="submit">Add Contact</button>
     </form>
 
